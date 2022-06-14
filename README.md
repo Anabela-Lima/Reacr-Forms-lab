@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# REACT FORMS LAB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Lab Overview
 
-## Available Scripts
+Create a basic React app which displays provided recipes on the front-end by use of the `.map()` method for objects, by first housing the data in state. Further, be able to add a new recipe to this list using a HTML form. This form makes further use of state.
 
-In the project directory, you can run:
 
-### `npm start`
+## Aims
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- To provide practice of building a **FORM** in React
+- To provide more practice with passing **PROPS** in React
+- To provide more practice with using the **USESTATE** HOOK
+- To provide practice of **MAPPING** content (the provided list & json) to JSX components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Lab Steps
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Please follow through these initial steps sequentially. The three extension tasks can be attempted in any order.
 
-### `npm run build`
+1. Create a new React app `create-react-app {appName}`
+2. Using the data set (below), save this list into state using the `useState` hook (remember to import!)
+3. Create a constant which equals this data mapped to multiple JSX objects (such as a series of `<p>` elements). Make use of only one property at first
+4. Call this constant within the `return` function to render it on the front-end (remember to use `{}` to denote JavaScript within the `return`!)
+5. Abstract this constant out, placing it in it's own component, passing in the initial state from above as a prop
+6. Expand out this mapping process to make use of the other two properties (could you make use of another component here?)
+7. Create a form component for adding in a new recipe at the bottom of the page
+8. Add functionality to your form to manage adding the submitted data to your original state from Step 2 (remember to prevent the default behaviour of the form on-submit so that the page doesn't refresh!)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Extensions:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Add basic styling to your entire page using CSS. Add in the extra navigation element seen in the wireframe
+2. Add in some basic form validation so that the rating can only be the values 1 through 5, and so that an empty form cannot be submitted
+3. Make your search bar within the header section functional (filtering the recipes by name). Ensure that the filter is case-insensitive
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Wireframe Design
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Below is a simple wireframe design that you can optionally use. Please note that this exercise is focussed primarily on the building of a functioning form and the mapping of content, not CSS.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="./react_form_wireframe.png" alt="Example wireframe including a navigation bar with title, three anchors and a search bar. Six recipe cards are shown below in their own section followed by a form which takes in a recipe name, set of ingredients and rating"/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Data Set
 
-## Learn More
+Below is the initial data state for this exercise. Start by saving this data set as a separate constant before you place it into state using `useState`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+[
+    {
+        cakeName: "Lemon Drizzle",
+        ingredients: ["eggs", "butter", "lemon  zest", "sugar", "self-raising flour"],
+        rating: 5
+    },
+    {
+        cakeName: "Tea Loaf",
+        ingredients: ["eggs", "oil", "dried fruit", "sugar", "self-raising flour", "strong tea"],
+        rating: 3
+    },
+    {
+        cakeName: "Brownie",
+        ingredients: ["chocolate", "eggs", "flour", "butter", "walnuts"],
+        rating: 4
+    },
+    {
+        cakeName: "Carrot Cake",
+        ingredients: ["carrots", "walnuts", "oil", "cream cheese", "flour", "sugar"],
+        rating: 5
+    }
+  ]
+```
