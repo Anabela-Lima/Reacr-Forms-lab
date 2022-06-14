@@ -5,6 +5,12 @@
 Create a basic React app which displays provided recipes on the front-end by use of the `.map()` method for objects, by first housing the data in state. Further, be able to add a new recipe to this list using a HTML form. This form makes further use of state.
 
 
+![Screenshot 2022-06-14 at 22 56 48](https://user-images.githubusercontent.com/101633036/173696197-baa919ea-cae8-44a6-be01-3b09993daf13.png)
+
+
+
+
+
 ## Aims
 
 - To provide practice of building a **FORM** in React
